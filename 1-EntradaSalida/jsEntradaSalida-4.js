@@ -4,6 +4,9 @@
 */
 function mostrar()
 {
+var id;
+
+id=prompt("Dato por prompt");
 
 }
 
