@@ -5,7 +5,7 @@ function mostrar()
     var nombre="Jose";
     var edad="18";
 
-    alert("Usted se llama: " + nombre + " y su edad es: " + edad);
+    alert("Usted se llama: " + nombre + " y su edad es: " + edad); //Codigo concatenado
 
 
 
