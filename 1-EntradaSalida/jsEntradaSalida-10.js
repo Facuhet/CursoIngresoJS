@@ -6,7 +6,7 @@ function mostrarAumento()
 {
   var importe = document.getElementById("importe").value;
   const descuento = 75;
-  var porcentaje = 100;
+  const porcentaje = 100;
   var importeParseado = parseInt(importe);
 
   var resultado = (importeParseado*descuento)/porcentaje;
