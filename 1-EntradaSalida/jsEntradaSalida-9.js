@@ -8,10 +8,8 @@ function mostrarAumento()
     const aumento=110;    
     const porcentaje=100;
     var sueldoParseado = parseInt(sueldo);
-    var resultado = 
+    var resultado = (sueldo*aumento)/porcentaje;
     document.getElementById("resultado").value = resultado;
-
-    alert("Tu aumento de 10% es " + ); // Aparecera en pantalla el resultado aumentado
 
 
 	
