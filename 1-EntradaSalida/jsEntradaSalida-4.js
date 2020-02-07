@@ -4,9 +4,16 @@
 */
 function mostrar()
 {
-var id;
+	var dato;
+	dato = prompt("Coloque su nombre");
 
-id=prompt("Dato por prompt");
+	document.getElementById("elNombre").value=dato; // Pasa el dato del prompt al id 
+
+
+
+	
+
+    
 
 }
 

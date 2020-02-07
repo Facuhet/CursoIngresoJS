@@ -2,9 +2,11 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-    var id= "DATO";
+    var dato;
 
-    alert(id);
+    dato = document.getElementById("elNombre").value; //Tomar id de html
+
+    alert(dato);
    
 
 }
