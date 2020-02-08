@@ -47,5 +47,5 @@ function PrecioFinal ()
     var resultadoConIvaParseado = parseInt(resultadoConIva);
     var precioFinalConIva = resultadoConIvaParseado+resultadoSinIvaParseado;
 
-    alert("El precio final es "+ resultadoSinIva+" con IVA es "+ precioFinalConIva);
+    alert("El precio final con su IVA es "+precioFinalConIva);
 }
