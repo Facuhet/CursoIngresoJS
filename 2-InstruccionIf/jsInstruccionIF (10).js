@@ -8,8 +8,12 @@ function mostrar()
 	if (aleatorio >= 9){
 
 		alert("Nota: "+aleatorio+" EXCELENTE");
-	}
+	} else if (aleatorio > 4){
+		alert("Nota: "+aleatorio+" Aprobo");
+	    }else if (aleatorio<4){
+			alert("Nota: "+aleatorio+" Vamos, la proxima se puede");
 
+		   }
 	
 
 }//FIN DE LA FUNCIÓN
