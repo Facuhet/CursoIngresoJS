@@ -54,12 +54,14 @@ function Materiales ()
     var largoParseado = parseInt(largo);
     var anchoParseado = parseInt(ancho);
     var perimetro = 2*(largoParseado+anchoParseado);
-
     var perimetroParseado = parseInt(perimetro);
+
     var referencia1x1 = 4;
     var referencia1x1Parseado = parseInt(referencia1x1);
+
     var materialCal = 3;
     var materialCalParseado = parseInt(materialCal);
+    
     var materialCemento = 2;
     var materialCementoParseado = parseInt(materialCemento);
 
