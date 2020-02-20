@@ -8,22 +8,66 @@ var eleccionMaquina;
 
 function comenzar()
 {
-	
-
+    eleccionMaquina = Math.floor(Math.random()*3 + 1);
+    
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	
+    switch(eleccionMaquina) {
+
+        case 1:
+            alert("!Ganaste¡");
+        break;
+
+        case 2:
+            alert("Empataste");
+        break;
+
+        case 3:
+            alert("Perdiste");
+        break;
+
+    }
+    
+    
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    switch(eleccionMaquina){
 
+        case 1:
+            alert("!Ganaste¡");
+        break;
+
+        case 2:
+            alert("Empataste");
+        break;
+
+        case 3:
+            alert("Perdiste");
+        break;
+
+    }
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+    switch(eleccionMaquina){
+
+        case 1:
+            alert("!Ganaste¡");
+        break;
+
+        case 2:
+            alert("Empataste");
+        break;
+
+        case 3:
+            alert("Perdiste");
+        break;
+
+    }
 
 }//FIN DE LA FUNCIÓN
