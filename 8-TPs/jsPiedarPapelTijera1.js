@@ -17,15 +17,15 @@ function piedra()
     switch(eleccionMaquina) {
 
         case 1:
-            alert("!Ganaste¡");
-        break;
-
-        case 2:
             alert("Empataste");
         break;
 
-        case 3:
+        case 2:
             alert("Perdiste");
+        break;
+
+        case 3:
+            alert("Ganaste");
         break;
 
     }
@@ -38,7 +38,7 @@ function papel()
     switch(eleccionMaquina){
 
         case 1:
-            alert("!Ganaste¡");
+            alert("Ganaste");
         break;
 
         case 2:
@@ -57,15 +57,15 @@ function tijera()
     switch(eleccionMaquina){
 
         case 1:
-            alert("!Ganaste¡");
+            alert("Perdiste");
         break;
 
         case 2:
-            alert("Empataste");
+            alert("Ganaste");
         break;
 
         case 3:
-            alert("Perdiste");
+            alert("Empataste");
         break;
 
     }
