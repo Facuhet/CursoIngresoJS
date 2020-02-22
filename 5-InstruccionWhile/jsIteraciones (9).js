@@ -1,66 +1,52 @@
 function mostrar()
 {
+	//
+
 
 	var contador=0;
 	// declarar variables
-	var iterador;
-	var respuesta;
+	var respuesta = true;
 	var numero;
 	var minimo;
 	var maximo;
 	var primeraiteracion=true;
 
-	respuesta = prompt("Ingrese cantidad de veces");
-	iterador = parseInt(respuesta);
-
-	while(iterador == respuesta)
+	while(respuesta == true)
 	{
-		contador++;
 			numero = prompt("Ingrese un numero");
 			numero = parseInt(numero);
 
-			if (numero == null){
+
+			if (numero == null)
+			{
 				break;
 			}
 
 		
 		
-		while(isNaN(numero)){
+		while(isNaN(numero))
+		{
 			numero = prompt("Ingrese un numero valido")
 
-			if (numero == null){
+			if (numero == null)
+			{
 				break;
-			}
-				
+			}		
 			numero = parseInt(numero);
-		}
-
-	
-			if (primeraiteracion){ 
-
-				primeraiteracion = false;
-				maximo = numero;
-				minimo = numero;
-
-			} else {
-				
-				if(numero > maximo){ 
+		}		
+				if(primeraiteracion == true || numero > maximo)
+				{ 
 					maximo = numero;
-
 			    }
-				if(numero < minimo){
+				if(primeraiteracion == true|| numero < minimo)
+				{
 					minimo = numero;
-				}
-				
-			}
+				}	
+			
+				primeraiteracion = false;
 
-			if (contador == iterador){
-				break;
-			}
-
+				respuesta = confirm("¿Desea ingresar otro numero?")
 	}
-
-	
 	document.getElementById("maximo").value = maximo;
 	document.getElementById("minimo").value = minimo;
 }//FIN DE LA FUNCIÓN
