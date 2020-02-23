@@ -21,23 +21,23 @@ function comenzar()
 
     switch(operadorRandom){
         case 1:
-                 operadorMatematico = "+";
-                 respuesta = numeroAleatorioUno + numeroAleatorioDos;
+            operadorMatematico = "+";
+            respuesta = numeroAleatorioUno + numeroAleatorioDos;
         break;
 
         case 2:
-                operadorMatematico = "-";
-                respuesta = numeroAleatorioUno - numeroAleatorioDos;
+            operadorMatematico = "-";
+            respuesta = numeroAleatorioUno - numeroAleatorioDos;
         break;
        
         case 3:
-                operadorMatematico = "*";
-                respuesta = numeroAleatorioUno * numeroAleatorioDos;
+            operadorMatematico = "*";
+            respuesta = numeroAleatorioUno * numeroAleatorioDos;
         break;
 
         case 4:
-                operadorMatematico = "/";
-                respuesta = numeroAleatorioUno / numeroAleatorioDos;
+            operadorMatematico = "/";
+            respuesta = numeroAleatorioUno / numeroAleatorioDos;
         break;
 
     }
