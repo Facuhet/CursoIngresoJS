@@ -29,7 +29,9 @@ function piedra()
 			alert("Ganaste");
 			ContadorDeGanadas++;
 		break;
+		
 	}
+	mostrarResultado()
 	
 }//FIN DE LA FUNCIÓN
 function papel()
@@ -50,7 +52,9 @@ function papel()
 			alert("Perdiste");
 			ContadorDePerdidas++;
 		break;
+		
 	}
+	mostrarResultado()
 	
 }//FIN DE LA FUNCIÓN
 function tijera()
@@ -71,7 +75,9 @@ function tijera()
 			alert("Empataste");
 			ContadorDeEmpates++;
 		break;
+		
 	}
+	mostrarResultado()
 
 }//FIN DE LA FUNCIÓN
 
