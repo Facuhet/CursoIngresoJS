@@ -21,14 +21,14 @@ function ComenzarIngreso ()
 
     while(contador < 6)
     {   
-        contador ++;
+        
         edad = prompt("Ingrese su edad (Entre 18 y 90 años");
         edad = parseInt(edad);
         
-        if (edad > 90 && edad < 18)
+        if (edad < 18 || edad > 90)
         {
-            prompt("Error. Ingresar edad valida");
-            break;
+            edad = prompt("Error. Ingresar edad valida");
+            edad = parseInt(edad);
         }
         else if(edad == null)
         {
@@ -43,29 +43,25 @@ function ComenzarIngreso ()
                 break;
             }
         }
+        contador ++;
 
         sexo = prompt("Ingresar sexo").toUpperCase();
-        contador++;
+     
 
         if(sexo != "F" && "M")
         {
-            prompt("Error. Ingresar sexo").toUpperCase();
-            break;
+            sexo = prompt("Error. Ingresar sexo").toUpperCase();
+            
         }
-        
-        if (contador == 6)
-        {
-            break;
-        }
-        
+        contador ++;
+
         estadoCivil = prompt("Ingrese estado civil (1-Soltero/2-Casado/3-Divorciado/4-Viudo)");
         estadoCivil = parseInt(estadoCivil);
 
-        contador++;
         if(estadoCivil != 1 && estadoCivil != 2 && estadoCivil != 3 && estadoCivil != 4)
         {
             estadoCivil = prompt("Error. Ingrese estado civil (1-Soltero/2-Casado/3-Divorciado/4-Viudo)");
-            break;
+            
         }
         else if(estadoCivil == null)
         {
@@ -80,15 +76,15 @@ function ComenzarIngreso ()
                 break;
             }
         }
+        contador ++;
 
         sueldoBruto = prompt("Ingrese sueldo bruto (No menor a 8000)");
         sueldoBruto = parseInt(sueldoBruto);
-        contador++;
 
         if(sueldoBruto < 8000)
         {
             sueldoBruto = prompt("Error. Ingrese sueldo bruto valido");
-            break;
+            
         }
         else if(sueldoBruto == null)
         {
@@ -103,15 +99,15 @@ function ComenzarIngreso ()
                 break;
             }
         }
+        contador ++;
         
         numeroLegajo = prompt("Ingresar legajo");
         numeroLegajo = parseInt(numeroLegajo);
-        contador ++;
 
-        if(numeroLegajo < 1000 && numeroLegajo > 9999)
+        if(numeroLegajo < 1000 || numeroLegajo > 9999)
         {
             numeroLegajo = prompt("Error. Ingrese legajo valido")
-            break;
+            
         }
         else if(numeroLegajo == null)
         {
@@ -126,15 +122,22 @@ function ComenzarIngreso ()
                 break;
             }
         }
+        contador ++;
 
         nacionalidad = prompt("Ingrese nacionalidad").toUpperCase();
-        contador++;
 
         if(nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
         {
             nacionalidad = prompt("Error. Ingrese nacionalidad valida").toUpperCase();
+            
+        }
+        contador ++;
+        
+        if (contador == 6)
+        {
             break;
         }
+
     }
 
 
