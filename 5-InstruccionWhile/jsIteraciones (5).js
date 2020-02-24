@@ -1,11 +1,11 @@
 function mostrar()
 {
 
-var sexo = prompt("ingrese f ó m .");
+var sexo;
 
     while(sexo != "f" && sexo != "m"){
         
-        sexo = prompt("Ingrese f o m");
+        sexo = prompt("Ingrese f o m").toLowerCase();
 
     }
 
