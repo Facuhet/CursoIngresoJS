@@ -11,6 +11,10 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
     var numeroDivisible = 0;
     var primo;
     var activarPrimo = true;
+    var cont = 2;
+    var cont2 = 0;
+    var bandera = 0;
+    var banderaPrimos = 0;
 
 function NumerosPares() 
 {
@@ -21,7 +25,7 @@ function NumerosPares()
 		
         if(numero % 2 == 0)
         {
-            alert(numero+" Soy Par");
+            alert(numero+" Es Par");
         }
         numero--; 
 
@@ -37,7 +41,7 @@ function NumerosImpares()
 		
         if(numero % 2 != 0)
         {
-            alert(numero+" Soy impar");
+            alert(numero+" Es impar");
         }
         numero--;
         
@@ -66,26 +70,71 @@ function NumerosDivisibles()
 }
 
 function VerificarPrimo()
-{
+{/*
     numero = document.getElementById("numero").value;
     primo = 2;
 
-    while(primo < numero)
+    while(numero > 0)
     {
-        if(numero % primo == 0)
+        while(primo < numero)
         {
-            activarPrimo = false;
-        }
-        primo++;
-    }
+            if(numero % primo != 0)
+            {
+                banderaPrimos = 0;
+            }
+            primo++;
 
-    if(activarPrimo == true)
-    {
-        alert("El numero "+numero+ " Es primo");
-    }
+            if(numero % primo == 0 && primo != numero)
+            {
+                bandera = 0;
+            }
+            primo++;
+
+            if(primo == numero && numero % primo == 0)
+            {
+                banderaPrimos = 1;
+            }
+
+        }
+
+        if(banderaPrimos = 1)
+        {
+            alert("Es un numero primo");
+            numero = 0;
+        }
+        else
+        {
+            alert("No es un numero primo")
+            numero = 0;
+        }
+        
+    }*/
 }
 
 function NumerosPrimos()
 {
+    numero = document.getElementById("numero").value;
 
+    while(cont <= numero)
+    {
+        while(cont2 < cont)
+        {
+            if(cont % cont2 == 0 && cont2 != 1 && cont2 != cont)
+            {
+                bandera = 1;
+            }
+            cont2++;
+        }
+
+        if(bandera == 0)
+        {
+            alert(cont2+" Numero primo desde "+numero);
+        }
+        else
+        {
+            bandera = 0;
+        }
+        cont++;
+        cont2=0;
+    }
 }
