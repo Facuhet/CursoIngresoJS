@@ -10,11 +10,10 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
     var numero;
     var numeroDivisible = 0;
     var primo;
-    var activarPrimo = true;
-    var cont = 2;
-    var cont2 = 0;
-    var bandera = 0;
-    var banderaPrimos = 0;
+    var inicioPrimo;
+    var numerosAnteriores;
+    var comprobarPrimos;
+    var activar;
 
 function NumerosPares() 
 {
@@ -73,43 +72,51 @@ function VerificarPrimo()
 {
     numero = document.getElementById("numero").value;
     primo = 2;
+    inicioPrimo = 2
+    
+    for(primo, numero , inicioPrimo; inicioPrimo < numero ; inicioPrimo++){
 
-    if(numero % primo == 0 && primo != 1)
-    {
-        bandera = 1;
+        if(numero % inicioPrimo == 0){
+
+            primo++;
+        }
     }
-    primo++;
 
-    if()
-    {
-        
+    if(primo != 2){
+        alert(numero+" No es un numero primo");
+
+    }else{
+
+        alert(numero+" Es un numero primo");
     }
 }
 
 function NumerosPrimos()
 {
     numero = document.getElementById("numero").value;
+    numerosAnteriores = 2;
+    comprobarPrimos = 0;
+    activar = 0;
 
-    while(cont <= numero)
-    {
-        while(cont2 < cont)
-        {
-            if(cont % cont2 == 0 && cont2 != 1 && cont2 != cont)
-            {
-                bandera = 1;
+    while(numerosAnteriores <= numero){
+        
+        while(comprobarPrimos < numerosAnteriores){
+
+            if(numerosAnteriores % comprobarPrimos == 0 && comprobarPrimos != 1 && comprobarPrimos != numerosAnteriores){
+
+                activar = 1;
             }
-            cont2++;
+            comprobarPrimos++;
         }
 
-        if(bandera == 0)
-        {
-            alert(cont2+" Numero primo desde "+numero);
+        if(activar == 0){
+            alert(comprobarPrimos+" Soy un numero primo");
         }
-        else
-        {
-            bandera = 0;
+        else{
+            activar = 0;    
         }
-        cont++;
-        cont2=0;
-    }
+
+        numerosAnteriores++;
+        comprobarPrimos = 0;
+    }       
 }
