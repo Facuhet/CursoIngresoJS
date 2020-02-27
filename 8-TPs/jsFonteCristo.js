@@ -70,45 +70,20 @@ function NumerosDivisibles()
 }
 
 function VerificarPrimo()
-{/*
+{
     numero = document.getElementById("numero").value;
     primo = 2;
 
-    while(numero > 0)
+    if(numero % primo == 0 && primo != 1)
     {
-        while(primo < numero)
-        {
-            if(numero % primo != 0)
-            {
-                banderaPrimos = 0;
-            }
-            primo++;
+        bandera = 1;
+    }
+    primo++;
 
-            if(numero % primo == 0 && primo != numero)
-            {
-                bandera = 0;
-            }
-            primo++;
-
-            if(primo == numero && numero % primo == 0)
-            {
-                banderaPrimos = 1;
-            }
-
-        }
-
-        if(banderaPrimos = 1)
-        {
-            alert("Es un numero primo");
-            numero = 0;
-        }
-        else
-        {
-            alert("No es un numero primo")
-            numero = 0;
-        }
+    if()
+    {
         
-    }*/
+    }
 }
 
 function NumerosPrimos()

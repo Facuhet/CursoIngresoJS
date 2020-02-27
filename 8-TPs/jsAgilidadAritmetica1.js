@@ -12,6 +12,7 @@ se debe informar si el resultado es el correcto o no.
     var operadorMatematico;
     var respuestaUsuario;
     var operadorRandom;
+
 function comenzar()
 {
     numeroAleatorioUno = Math.floor(Math.random()*10+1);
@@ -54,6 +55,7 @@ function Responder()
 
 	if(respuestaUsuario == respuesta){
         alert("!Correcto¡");
+        comenzar();
     }else if(respuestaUsuario != respuesta){
         alert("!Incorrecto¡");
     }

@@ -3,12 +3,14 @@ se agregara un temporizador que
  a los cinco segundos dará por terminado 
  el juego  de no ser ingresado el resultado 
  correcto en ese lapso de tiempo. */
+
 var respuesta;
 var temporizador;
 var numeroUnoRandom;
 var numeroDosRandom;
 var respuestaUsuario;
 var operadorRandom;
+
 function comenzar()
 {
     numeroUnoRandom = Math.floor(Math.random()*10+1);

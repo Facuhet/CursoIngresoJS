@@ -5,14 +5,15 @@ mostrara el texto de un color entre los 6 posibles
  el botón correcto se informara cuanto tiempo tardo.
 */
 var ColorSecreto;
-var tiempoInicio = 0;
+var tiempoInicio = new Date();
 var tiempo = 0;
 var Color;
-
-    setInterval(function comenzar(){
+var tiempoFinal;
+var tiempoTotal;
+    /*setInterval(function comenzar(){
         tiempo = tiempoInicio;
         tiempoInicio++;
-    },1000);
+    },1000);*/
     
 
 function comenzar()
@@ -48,6 +49,7 @@ function comenzar()
 
         default:
         break;
+
     }
 
     Color = document.getElementById("ColorElejido").value;
@@ -56,10 +58,16 @@ function comenzar()
 }//FIN DE LA FUNCIÓN
 function Responder(colorParametro)
 {
-    
+    tiempoFinal = new Date();
+
+    tiempoTotal = tiempoFinal - tiempoInicio;
+
+    tiempoTotal = Math.floor(tiempoTotal/1000);
+
     if(colorParametro == Color)
     {
-        alert("Has tardado "+ tiempoInicio+" Segundos");
+        alert("Has tardado "+tiempoTotal+" Segundos en ganar");
+        comenzar();
     }
         
 	
