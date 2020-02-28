@@ -29,7 +29,7 @@ function mostrar()
 
         }while(!isNaN(letra))
         
-        if(numero > 0 && numero < 101){
+        if(numero > 0){
             acumuladorPositivos += numero;
             contadorPositivos++;
         }
@@ -51,7 +51,10 @@ function mostrar()
         }
 
         //Punto D
-        promedio = acumuladorPositivos / contadorPositivos;
+        if(contadorPositivos != 0){
+
+            promedio = acumuladorPositivos / contadorPositivos;
+        }
 
         //Punto F
         
@@ -79,3 +82,20 @@ function mostrar()
     alert("Suma de numeros negativos : "+acumuladorNegativos);
     alert("Maximo y su letra : "+maximo+" "+letraMaximo+" | Minimo y su letra : "+minimo+" "+letraMinimo);
 }
+    /* if(primeraIteracion){
+        primeraIteracion = false
+        numero = maximo;
+        numero = minimo;
+        letraMaximo = letra;
+        letraMinimo = letra;
+       }else {
+           if(numero > maximo){
+               maximo = numero;
+               letraMaximo = letra;
+           }
+           if(numero < minimo){
+               minimo = numero;
+               letraMinimo = letra;
+           }
+       }
+

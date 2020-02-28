@@ -3,25 +3,36 @@ function mostrar()
     var precioIngresado;
     var precioFinalDescuento;
     var descuento;
+    var contador = 0;
 
-    //Dato (numero) ingresado
-    precioIngresado = prompt("Ingrese precio");
     
-    //Dato (numero - porcentaje) ingresado
-    descuento = prompt("Ingrese descuento");
+    //Dato (numero) ingresado
 
-    //Parseo de datos
-    descuento = parseInt(descuento);
-    precioIngresado = parseInt(precioIngresado);
+    do{
 
-    //Cuentas
-    descuento = descuento/100;
-    descuento = precioIngresado*descuento;
+        do{ 
 
-    //Resultado final con descuento aplicado
-    precioFinalDescuento = precioIngresado - descuento;
+            precioIngresado = prompt("Ingrese dato");
+            precioIngresado = parseInt(precioIngresado);
 
-    //Muestra de resultado en pantalla
-    document.getElementById("elPrecioFinal").value = "Precio final con descuento : "+precioFinalDescuento;
+        }while(isNaN(precioIngresado))
+
+        do{
+
+            descuento = prompt("Ingrese descuento");
+            descuento = parseInt(descuento);
+
+        }while(isNaN(descuento));
+
+        descuento = descuento/100;
+        descuento = descuento*precioIngresado;
+
+        precioFinalDescuento = precioIngresado - descuento;
+
+        contador++;
+
+    }while(contador < 1);
+
+    document.getElementById("elPrecioFinal").value = precioFinalDescuento;
     
 }

@@ -68,8 +68,7 @@ function mostrar()
             pesoMaximo = peso;
             marcaProductoPesado = marca;
         }
-
-        if(primeraIteracion == true || peso < pesoMinimo){
+        else if(primeraIteracion == true || peso < pesoMinimo){
 
             pesoMinimo = peso;
         }
