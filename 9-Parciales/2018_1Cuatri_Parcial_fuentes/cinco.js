@@ -1,38 +1,41 @@
 function mostrar()
 {
-    var planetas;
+    var nombreHuesped;
+    var cantidadPersonas;
+    var cantidadEstadias;
+    var formaDePago;
+    var respuesta;
 
-    planetas = prompt("Ingrese un planeta del sistema solar").toLowerCase();
+    respuesta = confirm("Desea ingresar datos");
+    do{
 
-    switch(planetas)
-    {
-        case "mercurio":
-            alert("Aca hace mas calor")
-        break;
+        do{
+            nombreHuesped = prompt("Ingrese nombre del huesped");
+            
+        }while(!isNaN(nombreHuesped));
 
-        case "venus":
-            alert("Aca hace mas calor");
-        break;
+        do{
+            cantidadPersonas = prompt("Cantidad de personas");
+            cantidadPersonas = parseInt(cantidadPersonas);
 
-        case "tierra":
-        case "la tierra":
-            alert("Aca vivimos");
-        break;
+        }while(isNaN(cantidadPersonas) || cantidadPersonas < 1);
 
-        case "marte":
-        case "jupiter":
-        case "saturno":
-        case "urano":
-        case "neptuno":
-            alert("Aca hace mas frio");
-        break;
+        do{
+            cantidadEstadias = prompt("Ingrese estadia");
+            cantidadEstadias = parseInt(cantidadEstadias);
 
-        case "pluton":
-            alert("Es considerado un planeta enano, aca hace mas frio");
-        break;
+        }while(isNaN(cantidadEstadias));
 
-        default:
-            alert(planetas+" No es un planeta valido");
-        break;
-    }
+        do{
+
+            formaDePago = prompt("Ingrese forma de pago (Efectivo, Tarjeta, QR").toLowerCase();
+
+        }while(!isNaN(formaDePago) || formaDePago != "efectivo" && formaDePago != "tarjeta" && formaDePago != "qr");
+
+        
+
+        respuesta = confirm("Desea seguir ingresando datos ?");
+
+    }while(respuesta);
+
 }
