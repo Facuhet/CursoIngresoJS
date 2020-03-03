@@ -38,7 +38,7 @@ function mostrar()
         }
 
         //Punto A y B
-        if(numero % 2 == 0){
+        if(numero != 0 && numero % 2 == 0){
             contadorPares++;
         }
         else{
@@ -97,5 +97,4 @@ function mostrar()
                minimo = numero;
                letraMinimo = letra;
            }
-       }
-
+       }*/
