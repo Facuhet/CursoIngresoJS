@@ -69,6 +69,8 @@ function mostrar()
 
         }while(!isNaN(formaDePago) || formaDePago != "efectivo" && formaDePago != "tarjeta" && formaDePago != "qr");
 
+        respuesta = confirm("Desea seguir ingresando datos ?");
+        
         //Datos para promedio reserva/dia
         acumuladorEstadias += cantidadEstadias;
         reserva++;
@@ -109,10 +111,14 @@ function mostrar()
             formaDePagoMasUtilizada = "tarjeta";
 
         }
-        else{
+        else if(qr > tarjeta && qr > efectivo){
+            formaDePagoMasUtilizada = "QR";
 
-            if(qr > tarjeta && qr > efectivo){
-                formaDePagoMasUtilizada = "QR";
+        }else{
+
+            if(efectivo == tarjeta == qr){
+
+                formaDePagoMasUtilizada = "Las formas de pagos son iguales";
             }
         }
 
@@ -121,7 +127,6 @@ function mostrar()
         promedio = acumuladorEstadias / reserva;
         promedio = parseInt(promedio);
 
-        respuesta = confirm("Desea seguir ingresando datos ?");
 
         
     }while(respuesta == true);
