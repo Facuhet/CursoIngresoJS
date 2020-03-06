@@ -123,17 +123,15 @@ function mostrar()
         }
 
         //Promedio
-
         promedio = acumuladorEstadias / reserva;
         promedio = parseInt(promedio);
 
-
-        
     }while(respuesta == true);
     
     document.write("Huesped con mas personas es "+ huespedConMasPersonasNombre+" con "+huespedConMasPersonas+" personas en una sola reserva"+"</br>");
     document.write("Son "+cantidadPersonasConMasDias+" las personas que se quedaron mas dias, los dias son : "+personaConMasDias+"</br>");
     document.write("La forma de pago mas utilizada es "+formaDePagoMasUtilizada+"</br>");
     document.write("Promedio cantidad de dias por reserva "+promedio+"</br>");
+            
 
 }

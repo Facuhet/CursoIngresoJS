@@ -1,84 +1,82 @@
 function mostrar()
 {
 
-	//declarar contadores y variables 
-	
-	var respuesta = true;
-	var numero;
-	var contadorPositivos = 0;
-	var acumuladorPositivos = 0;
-	var contadorNegativos = 0;
-	var acumuladorNegativos = 0;
-	var contadorCeros = 0;
-	var contadorPares = 0;
-	var promedioPositivos;
-	var promedioNegativos;
-	var diferenciaPositivosNegativos;
+var numeros;
+var contadorUsuario;
+var contador = 0;
+var contadorNegativos = 0;
+var contadorPositivos = 0;
+var contadorCeros = 0;
+var contadorPares = 0;
+var acumuladorNegativos = 0;
+var acumuladorPositivos = 0;
+var promedioPositivo;
+var promedioNegativo;
+var diferencia;
 
-	
-		
-	while(respuesta == true)
-	{
-		numero = prompt("Ingrese un numero")
-		numero = parseInt(numero);
+	//Arreglo para que no me rompan las bolas poniendo cualquier boludes de contador;
+	do{ 
 
-		respuesta = confirm("¿Desea ingresar otro numero?");
+		contadorUsuario = prompt("Ingrese la cantidad de numeros a validar");
 
-	
-		while(isNaN(numero))
-		{
-			numero = prompt("Error! Ingrese un numero: ");
+	}while(isNaN(contadorUsuario) || contadorUsuario == 0)
 
-			if(numero == null)
-			{
+	while(contador < contadorUsuario){
+
+		contador++;
+
+		do{
+
+			numeros = prompt("Ingrese su numero");
+
+			if(numeros == null){
 				break;
 			}
-		}
 
-		if (numero < 0)
-		{
-			//Punto 1
-			acumuladorNegativos += numero;
-			contadorNegativos++;
-			promedioNegativos = acumuladorNegativos/contadorNegativos;
+			numeros = parseInt(numeros);
 
+		}while(isNaN(numeros));
 
-		}
-		else if(numero > 0)
-		{
-			//Punto
-			acumuladorPositivos += numero;
+		if(numeros > 0){
+
 			contadorPositivos++;
-			promedioPositivos = acumuladorPositivos/contadorPositivos;
-
-				if(numero % 2 == 0)
-				{
-					contadorPares++;
-				}
-
+			acumuladorPositivos += numeros;
 		}
-		else
-		{
-			//Ceros / Punto 5
+		else if(numeros < 0){
+
+			contadorNegativos++;
+			acumuladorNegativos += numeros;
+		}
+		else{
+
 			contadorCeros++;
 		}
-	
-			//CuentaPromedioN/P
-		
-		diferenciaPositivosNegativos = acumuladorPositivos - acumuladorNegativos;
+
+		if(numeros != 0 && numeros % 2 == 0){
+
+			contadorPares++;
+		}
+
+		//Cuentas
+
+		promedioPositivo = acumuladorPositivos/contadorPositivos;
+
+		promedioNegativo = acumuladorNegativos/contadorNegativos;
+
+		diferencia = acumuladorPositivos - acumuladorNegativos;
 
 	}
-					//Mostrar por document.write()
-	document.write("Punto 1 (Suma de negativos) :"+acumuladorNegativos+"</br>");
-	document.write("Punto 2 (Suma de Positivos) :"+acumuladorPositivos+"</br>");
-	document.write("Punto 3 (Cantidad de Positivos) :"+contadorPositivos+"</br>");
-	document.write("Punto 4 (Cantidad de Negativos) :"+contadorNegativos+"</br>");
-	document.write("Punto 5 (Cantidad de Ceros) :"+contadorCeros+"</br>");
-	document.write("Punto 6 (Cantidad de Pares) :"+contadorPares+"</br>");
-	document.write("Punto 7 (Promedio de Positivos) :"+promedioPositivos+"</br>");
-	document.write("Punto 8 (Promedio de Negativos) :)"+promedioNegativos+"</br>");
-	document.write("Punto 9 (Difrencia entre P/N) :"+diferenciaPositivosNegativos+"</br>");
-	
 
+	//Arreglo para no mostrar los datos innecesariamente
+
+	if(contador == contadorUsuario){
+
+		document.write("Suma de negativos : "+acumuladorNegativos+"</br>");
+		document.write("Suma de positivos : "+acumuladorPositivos+"</br>");
+		document.write("Cantidad positivos : "+contadorPositivos+"</br>");
+		document.write("Cantidad negativos : "+contadorNegativos+"</br>");
+		document.write("Cantidad numeros pares : "+contadorPares+"</br>");
+		document.write("Diferencia entre positivo y negativo : "+diferencia+"</br>");
+	}
 
 }//FIN DE LA FUNCIÓN
