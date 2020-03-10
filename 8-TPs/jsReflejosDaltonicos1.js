@@ -10,6 +10,7 @@ var tiempo = 0;
 var Color;
 var tiempoFinal;
 var tiempoTotal;
+var colorRandom;
     /*setInterval(function comenzar(){
         tiempo = tiempoInicio;
         tiempoInicio++;
@@ -19,41 +20,67 @@ var tiempoTotal;
 function comenzar()
 {
     ColorSecreto = Math.floor(Math.random()*6 + 1);
-    
+    colorRandom = Math.floor(Math.random()*6+1);
 
-    switch(ColorSecreto)
-    {
+    switch(ColorSecreto){
         case 1:
-            document.getElementById("ColorElejido").value = "azul"
+            document.getElementById("ColorElejido").value = "azul";
         break;
 
         case 2:
-            document.getElementById("ColorElejido").value = "amarillo"
+            document.getElementById("ColorElejido").value = "amarillo";
         break;
 
         case 3:
-            document.getElementById("ColorElejido").value = "marron"
+            document.getElementById("ColorElejido").value = "marron";
         break;
         
         case 4:
-            document.getElementById("ColorElejido").value = "verde"
+            document.getElementById("ColorElejido").value = "verde";
         break;
 
         case 5:
-            document.getElementById("ColorElejido").value = "celeste"
+            document.getElementById("ColorElejido").value = "celeste";
         break;
 
         case 6:
-            document.getElementById("ColorElejido").value = "rojo"
+            document.getElementById("ColorElejido").value = "rojo";
         break;
 
         default:
         break;
+    }
 
+    switch(colorRandom){
+        case 1:
+            document.getElementById("ColorElejido").style.color = "red";
+        break;
+        
+        case 2:
+            document.getElementById("ColorElejido").style.color = "blue";
+        break;
+
+        case 3:
+            document.getElementById("ColorElejido").style.color = "yellow";
+        break;
+
+        case 4:
+            document.getElementById("ColorElejido").style.color = "brown";
+        break;
+
+        case 5:
+            document.getElementById("ColorElejido").style.color = "skyblue";
+        break;
+
+        case 6:
+            document.getElementById("ColorElejido").style.color = "green";
+        break;
+
+        default:
+        break;
     }
 
     Color = document.getElementById("ColorElejido").value;
-
 
 }//FIN DE LA FUNCIÓN
 function Responder(colorParametro)
@@ -68,6 +95,8 @@ function Responder(colorParametro)
     {
         alert("Has tardado "+tiempoTotal+" Segundos en ganar");
         comenzar();
+        tiempoInicio = new Date();
+        tiempoFinal = new Date();
     }
         
 	
